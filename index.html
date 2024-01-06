@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CGPA Calculator</title>
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+    </head>
+
+    <body>
+        <div class="calc-area">
+            <h1>CGPA CALCULATOR</h1>
+            <P>Calculate your GPA by inputting your grades and units.</P>
+
+
+            <div id="course-area">
+                <form class="course-sub-area">
+                    <b><label id="course-section" for ="courses">Courses</label></b>
+                    <b><label id="course-section" for ="Units">Units</label></b>
+                    <b><label id="course-section" for ="Grades">Grades</label></b>
+
+                    <input 
+                        type="text"
+                        placeholder="Course code"
+                        class="course key-a" 
+                        required 
+                    /> 
+
+                    <input 
+                        type="number"
+                        class="units key-a"
+                        placeholder="Units"
+                        value=""
+                        required 
+                    />
+
+                    <select class="grade key-a" required>
+                        <option class="grade" value="select">Select</option>
+                        <option class="grade" value="5">A</option>
+                        <option class="grade" value="4">B</option>
+                        <option class="grade" value="3">C</option>
+                        <option class="grade" value="2">D</option>
+                        <option class="grade" value="1">E</option>
+                        <option class="grade" value="0">F</option>
+                    </select>
+                </form>
+            </div>
+
+            <div class="btn">
+                <button onclick="addCourse()">Add Course + </button>
+                <button onclick="removeCourse()">Remove course - </button>
+                <button onclick="calcCgpa()">Calculate GPA</button>
+            </div>
+
+            <div class="final">
+                <p id="calc">Your GPA is:</p>
+            </div>
+        </div>
+
+        <script src = "/script.js"></script>
+    </body>
+</html>
